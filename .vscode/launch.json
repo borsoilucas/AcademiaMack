@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:AcademiaMack}",
+            "name": "Debug AcadMack",
+            "program": "${workspaceFolder:AcademiaMack}/.build/debug/AcadMack",
+            "preLaunchTask": "swift: Build Debug AcadMack"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:AcademiaMack}",
+            "name": "Release AcadMack",
+            "program": "${workspaceFolder:AcademiaMack}/.build/release/AcadMack",
+            "preLaunchTask": "swift: Build Release AcadMack"
+        }
+    ]
+}
