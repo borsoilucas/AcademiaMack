@@ -11,7 +11,8 @@ class Aluno: Pessoa {
         super.init(nome: nome, email: email)
     }
     
+    
     override func getDescricao() -> String {
-        return "Nome: \(nome) | Email: \(email) | Matrícula: \(matricula) | Nivel: \(nivel) | Plano: \(plano)"
+        return "Nome: \(nome) | Email: \(email) | Matrícula: \(matricula) | Nivel: \(nivel) | Plano: \(plano.nome)"
     }
 }
