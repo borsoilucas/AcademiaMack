@@ -1,5 +1,5 @@
 class Plano {
-    private(set) var nome: String
+    var nome: String
     
     init(nome: String) {
         self.nome = nome

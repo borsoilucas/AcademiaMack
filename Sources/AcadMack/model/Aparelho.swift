@@ -1,6 +1,6 @@
 class Aparelho : Manutencao {
     var nomeItem: String
-    var dataUltimaManutencao = "Nenhuma"
+    var dataUltimaManutencao: String = "Nenhuma"
 
     init(nomeItem: String){
         self.nomeItem = nomeItem

@@ -1,9 +1,10 @@
 class AulaColetiva: Aula {
     private(set) var alunosInscritos: [String: Aluno]
-    let capacidadeMaxima = 25
+    let capacidadeMaxima: Int 
 
     init(nome: String, instrutor: Instrutor, aluno: Aluno) {
         self.alunosInscritos = [aluno.matricula: aluno]
+        self.capacidadeMaxima = 25
 
         super.init(nome: nome, instrutor: instrutor)
     }
@@ -15,14 +16,13 @@ class AulaColetiva: Aula {
             return false
         }
 
-        for (key, _) in alunosInscritos {
-            if (key == aluno.matricula) {
-                print("Aluno ja matriculado!")
-                return false
-            }
+        if alunosInscritos.keys.contains(aluno.matricula){
+            print("Aluno \(aluno.nome) ja matriculado!")
+            return false
         }
+        
         alunosInscritos[aluno.matricula] = aluno
-        print("Aluno matriculado com sucesso!")
+        print("Aluno \(aluno.nome) matriculado com sucesso!")
         return true
     }
 

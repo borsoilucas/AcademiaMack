@@ -1,7 +1,7 @@
 class PlanoAnual: Plano {
     
-    override init(nome: String) {
-        super.init(nome: nome)
+    init() {
+        super.init(nome: "Plano Anual")
     }
     
     override func calcularMensalidade() -> Double {
