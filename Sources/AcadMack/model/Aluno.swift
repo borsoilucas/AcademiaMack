@@ -1,5 +1,5 @@
 class Aluno: Pessoa {
-    var matricula: String
+    let matricula: String
     private var nivel: NivelAluno = NivelAluno.iniciante
     private(set) var plano: Plano
     

@@ -1,15 +1,15 @@
 class AulaColetiva: Aula {
     private(set) var alunosInscritos: [String: Aluno] = [:]
-    var capacidadeMaxima: Int
+    let capacidadeMaxima: Int
     
     override init(nome: String, instrutor: Instrutor) {
-        capacidadeMaxima = 25
+        capacidadeMaxima = 3
         super.init(nome: nome, instrutor: instrutor)
     }
     
     func inscrever(aluno: Aluno) -> Bool {
         
-        if (alunosInscritos.count >= 25) {
+        if (alunosInscritos.count >= 3) {
             print("Aula ja atingiu capacidade máxima!")
             return false
         }
@@ -26,7 +26,7 @@ class AulaColetiva: Aula {
     }
     
     override func getDescricao() -> String {
-        return "Numero de vagas ocupadas: \(alunosInscritos.count) | Numero limite de vagas \(capacidadeMaxima)"
+        return "Numero de vagas ocupadas: \(alunosInscritos.count) | Numero limite de vagas: \(capacidadeMaxima)"
     }
     
 }
