@@ -1,15 +1,17 @@
-class Aparelho : Manutencao {
-    var nomeItem: String
+class Aparelho: Manutencao {
+    let nomeItem: String
     var dataUltimaManutencao: String = "Nenhuma"
 
-    init(nomeItem: String){
+    
+    init(nomeItem: String) {
         self.nomeItem = nomeItem
     }
-
-    func realizarManuntecao() -> Bool {
-        print("Iniciando manutenção...")
+    
+    func realizarManutencao() -> Bool {
+        print("Iniciando manutencao...")
         self.dataUltimaManutencao = "30/08/2025"
-        print("Manutenção realizado com sucesso! A data d ultima manuntencao foi atualizada para \(dataUltimaManutencao)")
+        print("Manutencao realizada com sucesso! A data de ultima manutencao foi atualizada para \(dataUltimaManutencao)")
         return true
+
     }
 }
